@@ -119,6 +119,7 @@
 
 
 const nodemailer = require('nodemailer');
+
 const dotenv = require('dotenv');
 
 // Helper function to calculate estimated cost based on total wattage
