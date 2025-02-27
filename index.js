@@ -9,16 +9,13 @@ const review = require('./route/review');
 const blog = require('./route/blog');
 const cart = require('./route/cart');
 const deliveryRate = require('./route/deliveryRate');
-<<<<<<< HEAD
 const brand =  require('./route/brand');
 const calculator =  require('./route/calculator');
 const estimate =  require('./route/estimate');
-=======
->>>>>>> aedd26313319b0881660e0a701fcadc5f7f69839
 
 
 
-// import crockery from './route/crockery';
+
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
@@ -31,7 +28,12 @@ const port = process.env.API_PORT;
 app.use(morgan('dev'))
 app.use(helmet());
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: '*',  // Allow all origins
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept', 'Origin', 'x-reset-token'],
+    credentials: false  // Set to false when using origin: '*'
+  }));
 
 db.sequelize
     .authenticate()
@@ -66,11 +68,8 @@ app.use("/api/reviews", review);
 app.use("/api/posts", blog);
 app.use("/api/cart", cart);
 app.use("/api/deliveryrates", deliveryRate)
-<<<<<<< HEAD
 app.use("/api/brands", brand)
 app.use("/api/estimate", estimate)
-=======
->>>>>>> aedd26313319b0881660e0a701fcadc5f7f69839
 
 
 
