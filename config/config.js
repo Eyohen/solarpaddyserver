@@ -8,15 +8,13 @@ module.exports = {
     "database": process.env.DB_NAME,
      "host": process.env.DB_HOST,
     //"host": "127.0.0.1",
-    "dialect": "postgres"
-    // dialectOptions: {
-    //   ssl: {
-    //     require: true,
-    //     rejectUnauthorized: false,
-    //   },
-    // },
-    // paystacksecret: process.env.PAYSTACK_SECRET_KEY,
-    // paystackbaseurl: process.env.PAYSTACK_BASE_URL,
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   },
   "test": {
     "username": "root",
@@ -30,13 +28,12 @@ module.exports = {
     "password": process.env.DB_PASSWORD,
     "database": process.env.DB_NAME,
     "host": process.env.DB_HOST,
-    //"host": "127.0.0.1",
-    "dialect": "postgres"
-    // dialectOptions: {
-    //   ssl: {
-    //     require: true,
-    //     rejectUnauthorized: false,
-    //   },
-    // },
+    "dialect": "postgres",
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
+    },
   }
 }

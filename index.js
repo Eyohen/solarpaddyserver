@@ -41,11 +41,11 @@ db.sequelize
         console.log(`postgres connection has been established successfully... ${process.env.NODE_ENV}`)
     })
     .catch((err) => {
-        console.log(`unable to connect to the databse ${err.message}`)
+        console.log(`unable to connect to the database ${err.message}`)
         if(
             err.name === 'SequelizeConnectionError' || err.name === 'SequelizeConnectionRefuseError'
         ){
-            console.log('the databse is disconnected please check the connection and try again')
+            console.log('the database is disconnected please check the connection and try again')
         }
         else{
             console.log(`An error occured while connecting to the database: ${err.message}`)
