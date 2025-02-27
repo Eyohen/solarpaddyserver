@@ -7,11 +7,8 @@ const path = require("path");
 const { uploadtocloudinary, uploadType } = require("../middleware/cloudinary");
 const db = require("../models");
 const { totalmem } = require("os");
-<<<<<<< HEAD
 const { Product, Review, Purchase, Category, Brand } = db;
-=======
-const { Product, Review, Category } = db;
->>>>>>> aedd26313319b0881660e0a701fcadc5f7f69839
+
 const { Op } = require('sequelize');
 
 cloudinary.config({
@@ -52,11 +49,7 @@ cloudinary.config({
 
 			const records = await Product.findAll({
 			
-<<<<<<< HEAD
 				include: [{ model: Category, as: 'Category' }, { model: Brand, as: 'Brand'}],
-=======
-               include:{model:Category, as: 'Category'}
->>>>>>> aedd26313319b0881660e0a701fcadc5f7f69839
 			});
 			return res.json(records);
 		} catch (e) {
@@ -69,13 +62,10 @@ cloudinary.config({
 		try {
 			const { id } = req.params;
 			const record = await Product.findOne({ where: { id },
-<<<<<<< HEAD
 				include: [{ model: Category, as: 'Category' }, { model: Brand, as: 'Brand'}],
 			});
-=======
-				include:{model:Category, as: 'Category'}
-			 });
->>>>>>> aedd26313319b0881660e0a701fcadc5f7f69839
+		
+		
 			return res.json(record);
 		} catch (e) {
 			return res.json({ msg: "fail to read", status: 500, route: "/read/:id" });

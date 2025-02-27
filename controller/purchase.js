@@ -18,10 +18,7 @@ cloudinary.config({
 	api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-<<<<<<< HEAD
-=======
 
->>>>>>> aedd26313319b0881660e0a701fcadc5f7f69839
 const create = async (req, res) => {
 	const transaction = await sequelize.transaction();
   

@@ -1,9 +1,5 @@
 const nodemailer = require('nodemailer')
-<<<<<<< HEAD
 const dotenv=require('dotenv')
-=======
-const dotenv = require('dotenv')
->>>>>>> aedd26313319b0881660e0a701fcadc5f7f69839
 
 
 module.exports = async (from, email, subject, text, customerName, orderId, totalItems, totalAmount, purchaseItems, address) => {
@@ -27,11 +23,7 @@ module.exports = async (from, email, subject, text, customerName, orderId, total
             html: `<!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
     <title>Order Confirmation - SolarPaddy</title>
-=======
-    <title>Order Confirmation - Amari Amour</title>
->>>>>>> aedd26313319b0881660e0a701fcadc5f7f69839
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -39,13 +31,9 @@ module.exports = async (from, email, subject, text, customerName, orderId, total
     <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px;">
         <!-- Header -->
         <div style="text-align: center; padding: 20px 0; border-bottom: 2px solid #023020;">
-<<<<<<< HEAD
             <h1 style="color: #023020; margin: 0; font-size: 28px;">SolarPaddy</h1>
             <p style="color: #666666; margin: 5px 0 0;">Your Trusted Solar Solutions Provider</p>
-=======
-            <h1 style="color: #023020; margin: 0; font-size: 28px;">Amari Amour</h1>
-            <p style="color: #666666; margin: 5px 0 0;">Your Best Ecommerce Place</p>
->>>>>>> aedd26313319b0881660e0a701fcadc5f7f69839
+
         </div>
 
         <!-- Order Confirmation Message -->
@@ -128,21 +116,13 @@ module.exports = async (from, email, subject, text, customerName, orderId, total
             <p style="margin: 0;">
                 <a href="tel:+2348033621415" style="color: #023020; text-decoration: none;">📞 +234 803 362 1415</a>
                 <br>
-<<<<<<< HEAD
                 <a href="mailto:powerup@solarpaddy.com" style="color: #023020; text-decoration: none;">✉️ powerup@solarpaddy.com</a>
-=======
-                <a href="mailto:powerup@amariamour.com" style="color: #023020; text-decoration: none;">✉️ powerup@Amari Amour.com</a>
->>>>>>> aedd26313319b0881660e0a701fcadc5f7f69839
             </p>
         </div>
 
         <!-- Footer -->
         <div style="text-align: center; padding: 20px; background-color: #023020; color: white; border-radius: 8px;">
-<<<<<<< HEAD
             <p style="margin: 0 0 10px;">SolarPaddy Ltd.</p>
-=======
-            <p style="margin: 0 0 10px;">Amari Amour Ltd.</p>
->>>>>>> aedd26313319b0881660e0a701fcadc5f7f69839
             <p style="margin: 0; font-size: 14px;">7 Ibiyinka Olorunbe, Victoria Island, Lagos</p>
             <div style="margin-top: 15px;">
                 <a href="#" style="color: white; text-decoration: none; margin: 0 10px;">Facebook</a>

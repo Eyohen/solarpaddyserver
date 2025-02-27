@@ -1,6 +1,6 @@
 const express = require('express');
 const {create,readId, readall, update, deleteId} = require('../controller/review');
-// const { verifyToken, requireAdmin } = require('../middleware/authMiddleware');
+
 
 const router = express.Router();
 

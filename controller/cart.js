@@ -9,11 +9,8 @@ const db = require("../models");
 const { totalmem } = require("os");
 const { Cart, User, Product } = db;
 const { Op } = require('sequelize');
-<<<<<<< HEAD
-=======
 
 
->>>>>>> aedd26313319b0881660e0a701fcadc5f7f69839
 
 cloudinary.config({
 	cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -53,11 +50,8 @@ cloudinary.config({
 			// create Cart record in the database
 		const record = await Cart.create({email:req.body.email, imageUrl: imageurl, fname, title, price:finalPrice, quantity, totalPrice:finalPrice * quantity, ...req.body });
 
-<<<<<<< HEAD
 			return res.status(200).json({ record, msg: "Successfully created Cart, check your email to see your receipt" });
-=======
-			return res.status(200).json({ record, msg: "Successfully create Cart, check your email to see your receipt" });
->>>>>>> aedd26313319b0881660e0a701fcadc5f7f69839
+
 		} catch (error) {
 			console.log("henry", error);
 			return res.status(500).json({ msg: "fail to create", error });

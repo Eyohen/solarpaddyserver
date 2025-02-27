@@ -1,8 +1,7 @@
 const express = require('express');
 
 const {create, readall, readId, update, deleteId} = require('../controller/product')
-// import verifyToken from '../middleware/verifyToken';
-// import { verifyToken, requireAdmin } from '../middleware/authMiddleware'; 
+
 const multer = require('multer');
 
 
