@@ -27,6 +27,7 @@ const { User } = db;
 
   const readall = async (req, res) => {
     try {
+      
       const limit = parseInt(req.query.limit) || 10;
       const offset = parseInt(req.query.offset) || 0;
 
